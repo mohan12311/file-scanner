@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"sync"
@@ -27,7 +26,6 @@ func setupTestDir(t *testing.T, dir string, files []string) {
 
 func teardownTestDir(t *testing.T, dir string) {
 	t.Helper()
-	fmt.Println("Deleting test directory:", dir) // 확인 메시지 추가
 	// 디렉토리 삭제
 	if err := os.RemoveAll(dir); err != nil {
 		t.Fatalf("Failed to remove test directory: %v", err)
